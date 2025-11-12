@@ -1,73 +1,150 @@
-# React + TypeScript + Vite
+# AnimeExplorer - Anime Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, comic-style anime search application built with React, TypeScript, and Redux Toolkit. Discover your favorite anime with a beautiful and interactive interface.
 
-Currently, two official plugins are available:
+![AnimeExplorer Screenshot](https://github.com/zhao-leihan/AnimeExplorer/blob/main/view/Screenshot%20(314).png?raw=true)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![part2 Screenshot](https://github.com/zhao-leihan/AnimeExplorer/blob/main/view/Screenshot%20(312).png?raw=true)
 
-## React Compiler
+![part3 Screenshot](https://github.com/zhao-leihan/AnimeExplorer/blob/main/view/Screenshot%20(313).png?raw=true)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **Instant Search**: Real-time anime search with debouncing
+- **Comic-Style UI**: Beautiful comics-inspired design with interactive elements
+- **Fully Responsive**: Optimized for desktop, tablet, and mobile devices
+- **Fast Performance**: Built with React 18 and Vite for optimal performance
+- **Detailed Views**: Comprehensive anime information and details
+- **Smart Pagination**: Efficient server-side pagination
+- **Smooth Animations**: Engaging loading animations and transitions
+- **Type Safety**: Full TypeScript implementation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Live Demo
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+[🔗 Add your live demo link here] (Netlify, Vercel, etc.)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Frontend**: React 18 + TypeScript
+- **State Management**: Redux Toolkit
+- **Routing**: React Router v6
+- **Styling**: Tailwind CSS + Custom Comics Design
+- **Build Tool**: Vite
+- **API**: Jikan API v4 (Unofficial MyAnimeList API)
+
+##  Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/zhao-leihan/AnimeExplorer.git
+   cd AnimeExplorer
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   ```
+   http://localhost:4000
+   ```
+
+## Project Structure
+
+```
+AnimeExplorer/
+├── src/
+│   ├── components/
+│   │   ├── AnimeCard.tsx
+│   │   ├── SearchBar.tsx
+│   │   ├── Pagination.tsx
+│   │   ├── LoadingScreen.tsx
+│   │   └── SkeletonLoader.tsx
+│   ├── pages/
+│   │   ├── SearchPage.tsx
+│   │   └── DetailPage.tsx
+│   ├── store/
+│   │   ├── index.ts
+│   │   ├── searchSlice.ts
+│   │   └── detailSlice.ts
+│   ├── hooks/
+│   │   └── useDebounce.ts
+│   ├── types/
+│   │   └── anime.ts
+│   ├── App.tsx
+│   └── main.tsx
+├── public/
+└── package.json
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run dev` - Start development server (port 4000)
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Key Features Implementation
+
+### Search Functionality
+- Debounced search with 250ms delay
+- Cancel previous requests to avoid race conditions
+- Real-time results with loading states
+
+### State Management
+- Redux Toolkit for centralized state management
+- Search state (query, results, pagination, loading, error)
+- Detail state (anime data, loading, error)
+
+### UI/UX Design
+- Custom comic-style design system
+- Responsive grid layouts
+- Smooth animations and transitions
+- Loading skeletons for better UX
+
+## Design System
+
+### Color Palette
+- Primary: `#ff375f`
+- Secondary: `#00a8ff`
+- Accent: `#ffcc00`
+- Purple: `#9c51ff`
+- Dark: `#1a1a2e`
+
+### Typography
+- Headings: Comic Neue (Bold)
+- Body: Nunito (Regular)
+
+## API Integration
+
+This app uses the [Jikan API v4](https://docs.api.jikan.moe/).
+
+##  Deployment
+
+### Netlify / Vercel
+Follow platform build instructions and set output folder to `/dist`.
+
+##  Contributing
+
+1. Fork repo
+2. Create branch
+3. Commit & push
+4. Open Pull Request
+
+##  License
+
+MIT License
+
+##  Author
+
+**Rayhan**
+- GitHub: [@yourusername](https://github.com/yourusername)
+
+---
+
+**Built using React, TypeScript, and Redux Toolkit**
