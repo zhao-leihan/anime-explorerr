@@ -2,11 +2,11 @@
 
 A modern, comic-style anime search application built with React, TypeScript, and Redux Toolkit. Discover your favorite anime with a beautiful and interactive interface.
 
-![AnimeExplorer Screenshot](https://github.com/zhao-leihan/AnimeExplorer/blob/main/view/Screenshot%20(314).png?raw=true)
+![AnimeExplorer Screenshot](https://github.com/zhao-leihan/anime-explorerr/blob/main/view/Screenshot%20(312).png)
 
-![part2 Screenshot](https://github.com/zhao-leihan/AnimeExplorer/blob/main/view/Screenshot%20(312).png?raw=true)
+![part2 Screenshot](https://github.com/zhao-leihan/anime-explorerr/blob/main/view/Screenshot%20(313).png)
 
-![part3 Screenshot](https://github.com/zhao-leihan/AnimeExplorer/blob/main/view/Screenshot%20(313).png?raw=true)
+![part3 Screenshot](https://github.com/zhao-leihan/anime-explorerr/blob/main/view/Screenshot%20(314).png)
 
 ## Features
 
