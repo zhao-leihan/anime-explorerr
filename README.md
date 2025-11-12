@@ -21,7 +21,7 @@ A modern, comic-style anime search application built with React, TypeScript, and
 
 ## Live Demo
 
-[🔗 Add your live demo link here] (Netlify, Vercel, etc.)
+[🔗 Add your live demo link here] (https://anime-explorerr.vercel.app/)
 
 ## Tech Stack
 
